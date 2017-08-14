@@ -131,12 +131,12 @@ if ($btValiderTout != null) {
                 /**
                  * Ceci est totalement optionnel. 
                  * Permet d'afficher un aperçu du rendu du code HTML. Il ne restera plus qu'à mettre un peu de CSS pour
-                 * créer le formulaire selon ses envie.
+                 * créer le formulaire selon ses envies.
                  */
                 $lsAffiche = $lsContenu;
 
                 /*
-                 *  Utilisation de &lt; et &gt; pour remplacer respectivement les chevrons "<" et ">"
+                 *  Utilisation de (&lt;) et (&gt;) pour remplacer respectivement les chevrons "<" et ">"
                  *  afin d'obtenir le code lui même et non le résultat final
                  *  Donc utilisation de code ASCII pour ce faire
                  */
@@ -171,7 +171,7 @@ if ($btValiderTout != null) {
                     $lsContenu .= "private &#36;" . $lsSnake->camelize($taEntetes[$i]) . ";\n";
 
                     /*
-                     * $lsContenuMethodes me permet de stocker les différentes méthodes dont j'ai besoin.
+                     * $lsContenuMethodes nous permet de stocker les différentes méthodes dont ont a besoin.
                      * C'est à dire les "public function getters and setters".
                      */
                     $lsContenuMethodes .= "public function set" . $lsSnake->majPremiereLettreMots($taEntetes[$i]) . "(&#36;" . $lsSnake->camelize($taEntetes[$i]) . ") { \n";
@@ -189,7 +189,7 @@ if ($btValiderTout != null) {
 
 
                 /*
-                 *  Utilisation de &lt; et &gt; pour remplacer respectivement les chevrons "<" et ">"
+                 *  Utilisation de (&lt;) et (&gt;) pour remplacer respectivement les chevrons "<" et ">"
                  *  afin d'obtenir le code lui même et non le résultat final
                  *  Donc utilisation de code ASCII pour ce faire
                  */
@@ -207,7 +207,7 @@ if ($btValiderTout != null) {
              */
             if ($rbSortie == "dao") {
 
-                // Préparation de la méthode afin de pouvoir caméliser ce dont j'ai besoin
+                // Préparation de la méthode afin de pouvoir caméliser ce dont on a besoin
                 $lsCaractereCamelize = new TravailDeChaineDeCaracteres();
 
                 /*
@@ -224,7 +224,7 @@ if ($btValiderTout != null) {
                     // pour l'ordre sql de INSERT
                     $lsContenu4 .= "?,";
 
-                    // pour le tableauValeurs de UPDATE et son ordre SQL sans la PrimaryKey qui ira dans le WHERE
+                    // pour le tableauValeurs de UPDATE et son ordre SQL sans la PrimaryKey qui elle, ira dans le WHERE
                     if ($nomColonnes !== $primaryKey[0]) {
                         $lsContenu5 .= "&#36;" . $lsCaractereCamelize->camelize($nomTable) . "->get" . $lsCaractereCamelize->camelize($nomColonnes[$i]) . "(),";
                         $lsContenu6 .= $nomColonnes[$i] . "= ?,";
@@ -303,11 +303,11 @@ if ($btValiderTout != null) {
                 $lsContenu .= "}\n";
                 $lsContenu .= "return &#36;lsMessage;\n";
                 $lsContenu .= "}\n\n";
-                // fin de la Class DAO sans les différents ordres SELECT existants pour le moment
+                // fin de la Class DAO sans les différents ordres SELECT existants pour le moment (à venir probablement plus tard)
                 $lsContenu .= "}///Fin Class DAO\n"; 
                 
                 /*
-                 *  Utilisation de &lt; et &gt; pour remplacer respectivement les chevrons "<" et ">"
+                 *  Utilisation de (&lt;) et (&gt;) pour remplacer respectivement les chevrons "<" et ">"
                  *  afin d'obtenir le code lui même et non le résultat final
                  *  Donc utilisation de code ASCII pour ce faire
                  */
