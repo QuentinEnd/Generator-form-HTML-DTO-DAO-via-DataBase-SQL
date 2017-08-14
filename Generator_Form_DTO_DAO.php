@@ -1,10 +1,10 @@
 <?php
 /*
-  MySQL2JsonCsvXmlExo.php
+  Generator-form-HTML-DTO-DAO-via-DataBase-SQL.php
  */
 session_start();
 
-// Au préalable, déclaration des différentes varaibles utilisées
+// Au préalable, déclaration des différentes variables utilisées
 $listesBDs = "";
 $listeTables = "";
 $nomBD = "";
