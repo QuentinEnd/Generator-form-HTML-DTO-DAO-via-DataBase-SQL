@@ -9,7 +9,7 @@
 /**
  * Description of Connexion
  *
- * @author allth
+ * @author Quentin
  */
 class Connexion {
 
