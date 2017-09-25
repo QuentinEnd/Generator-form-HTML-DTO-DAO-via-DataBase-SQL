@@ -175,7 +175,7 @@ if ($btValiderTout != null) {
                      * C'est à dire les "public function getters and setters".
                      */
                     $lsContenuMethodes .= "public function set" . $lsSnake->majPremiereLettreMots($taEntetes[$i]) . "(&#36;" . $lsSnake->camelize($taEntetes[$i]) . ") { \n";
-                    $lsContenuMethodes .= "return &#36;this->" . $lsSnake->camelize($taEntetes[$i]) . " = &#36;" . $lsSnake->camelize($taEntetes[$i]) . "; \n}\n\n";
+                    $lsContenuMethodes .= "&#36;this->" . $lsSnake->camelize($taEntetes[$i]) . " = &#36;" . $lsSnake->camelize($taEntetes[$i]) . "; \n}\n\n";
                     $lsContenuMethodes .= "public function get" . $lsSnake->majPremiereLettreMots($taEntetes[$i]) . "(&#36;" . $lsSnake->camelize($taEntetes[$i]) . ") { \n";
                     $lsContenuMethodes .= "return &#36;this->" . $lsSnake->camelize($taEntetes[$i]) . " = &#36;" . $lsSnake->camelize($taEntetes[$i]) . "; \n}\n\n";
                 }// Fin de la boucle
